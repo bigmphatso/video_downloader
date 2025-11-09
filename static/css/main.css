@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anonymous Pro','Forum','Montserrat', sans-serif;
+    box-sizing: border-box; /* Good practice to include */
+}
+
+body{
+    background-color: #121212;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    /* --- CENTERING THE MAIN CONTENT ON THE PAGE --- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    /* No need for 'margin: auto;' if body is a flex container */
+    padding: 20px;
+}
+
+.main {
+    display: flex; /* Make .main a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+.main h1 {
+    margin-bottom: 20px;
+}
+
+#downloadForm {
+    display: flex;
+    gap: 10px; /* Spacing between input and button */
+}
+
+#videoUrl {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 300px; /* Adjust as needed */
+    background-color: #222;
+    color: #fff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* A prominent color */
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

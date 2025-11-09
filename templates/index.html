@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video downloader - youtube, facebook, tiktok, x, instagram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <div class="main">
+            <h1>Video Downloader</h1>
+            <div id="downloadForm">
+                <input type="text" id="videoUrl" placeholder="Enter video URL here" required>
+                <button id="downloadBtn">Download</button>
+            </div>
+            <div id="status"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
