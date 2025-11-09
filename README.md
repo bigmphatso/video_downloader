@@ -16,22 +16,6 @@ This is a simple, web-based video downloader built using Flask (Python) for the 
 
 ---
 
-### Project Structure
-
-Ensure your project files are organized as follows:
-
-video-downloader/
-├── app.py
-├── downloader.py
-├── download_log.txt # Created automatically on first run
-├── templates/
-│ └── index.html
-└── static/
-├── css/
-│ └── main.css # Needed for styling, even if empty
-└── js/
-└── app.js
-
 ## 💻 Installation and Setup
 
 ### 1. Dependencies
@@ -45,10 +29,20 @@ video-downloader/
 
 - Clone this repository and install the dependencies:
 
+# 1. Clone the repository
 git clone <repository-url>
+
+# 2. Navigate into the project directory
 cd video-downloader
+
+# 3. Create a virtual environment named 'venv'
 python -m venv venv
-source venv/bin/activate # On Windows, use venv\Scripts\activate
+
+# 4. Activate the virtual environment
+source venv/bin/activate  # On Linux/macOS
+# venv\Scripts\activate   # On Windows (use this command instead)
+
+# 5. Install the required Python packages
 pip install flask yt-dlp
 
 ---
@@ -57,8 +51,7 @@ pip install flask yt-dlp
 
 1. Run the Flask app:
 
-python app.py
-
+        python app.py
 
 2. Open your browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
