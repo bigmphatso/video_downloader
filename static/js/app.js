@@ -9,7 +9,7 @@ async function startPolling() {
             const data = await res.json();
             
             if (data.status === "downloading") {
-                // Use a clear HTML structure for robust display
+                // feedback during download
                 statusDiv.innerHTML = `
                     <div style="margin-top:8px; padding: 15px; border-radius: 8px;">
                         <h4 style="margin-top: 0;">⏳ Downloading...</h4>
@@ -35,7 +35,7 @@ async function startPolling() {
             console.error("Polling error (network or JSON issue):", err);
             // Don't stop polling on minor error
         }
-    }, 1000); // Poll every 1 second
+    }, 2000); // Poll every 2 seconds
 }
 
 
@@ -53,11 +53,11 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
 
     statusDiv.innerText = "Requesting download...";
     
-    // Start polling to show status updates immediately
+    // Start polling - show status updates immediately
     startPolling(); 
 
     try {
-        // This request will block until the download is *complete* or *fails*
+        // This will block until the download is *complete* or *fails*
         const res = await fetch("/download", {
             method: "POST",
             headers: { "Content-Type": "application/json" },

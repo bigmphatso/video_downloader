@@ -5,6 +5,7 @@ import os
 import datetime
 
 # --- LOGGING SETUP ---
+# not necesarily that important for user, but good for debugging
 LOG_FILE = "download_log.txt"
 
 def log_event(message: str):
@@ -96,7 +97,7 @@ def download_video(url: str, output_dir: str = "downloads"):
         current_download_progress['status'] = "error"
         return {"status": "error", "message": str(e)}
 
-# --- NEW FUNCTION FOR FLASK TO POLL ---
+
 def get_progress():
     """Returns the current download progress dictionary."""
     global current_download_progress

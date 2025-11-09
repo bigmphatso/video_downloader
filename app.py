@@ -1,3 +1,5 @@
+# simple server bro!
+
 from flask import Flask, render_template, request, jsonify
 # Ensure both functions are imported
 from downloader import download_video, get_progress 

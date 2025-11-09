@@ -4,14 +4,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Anonymous Pro','Forum','Montserrat', sans-serif;
-    box-sizing: border-box; /* Good practice to include */
+    box-sizing: border-box;
 }
-
 body{
     background-color: #121212;
     color: #FFFFFF;
     overflow-x: hidden;
-    /* --- CENTERING THE MAIN CONTENT ON THE PAGE --- */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +19,14 @@ body{
 .container{
     width: 100%;
     max-width: 1200px;
-    /* No need for 'margin: auto;' if body is a flex container */
     padding: 20px;
 }
 
 .main {
-    display: flex; /* Make .main a flex container */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
+    /* *flex */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     padding: 40px;
     background-color: #1a1a1a;
     border-radius: 10px;
@@ -40,14 +38,14 @@ body{
 
 #downloadForm {
     display: flex;
-    gap: 10px; /* Spacing between input and button */
+    gap: 10px;
 }
 
 #videoUrl {
     padding: 10px;
     border: 1px solid #333;
     border-radius: 5px;
-    width: 300px; /* Adjust as needed */
+    width: 300px;
     background-color: #222;
     color: #fff;
 }
@@ -56,7 +54,7 @@ button[type="submit"] {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff; /* A prominent color */
+    background-color: #007bff;
     color: #fff;
     cursor: pointer;
     font-weight: bold;
